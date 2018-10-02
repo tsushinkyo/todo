@@ -1,0 +1,12 @@
+<div style="text-align:center">
+  <h1>
+    TODO list
+  </h1>
+  </div>
+  <div style="text-align:center">
+    <mat-form-field>
+      <input matInput placeholder="Todo" [(ngModel)]="inputText">
+    </mat-form-field>
+    <button mat-raised-button (click)="addTodo()">Basic</button>
+  </div>
+<app-todo-list-item *ngFor="let todoItem of (todoItems$ | async)" [todo]="todoItem"></app-todo-list-item>
